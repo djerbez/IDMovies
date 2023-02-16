@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/IDMovies/static/css/main.20d915ee.css",
+    "main.js": "/IDMovies/static/js/main.700baba4.js",
+    "static/js/787.28cb0dcd.chunk.js": "/IDMovies/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/IDMovies/index.html",
+    "main.20d915ee.css.map": "/IDMovies/static/css/main.20d915ee.css.map",
+    "main.700baba4.js.map": "/IDMovies/static/js/main.700baba4.js.map",
+    "787.28cb0dcd.chunk.js.map": "/IDMovies/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20d915ee.css",
+    "static/js/main.700baba4.js"
+  ]
+}
