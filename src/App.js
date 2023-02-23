@@ -11,11 +11,13 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    color: "black",
     width: "800px",
     height: "400px",
     textAlign: "center",
+    background: "rgb(2,0,36)",
+background: "linear-gradient(90deg, rgba(9,88,121,1) 100%, rgba(0,82,255,0.7539390756302521) 100%, rgba(2,0,36,1) 0%",
   },
+ 
 };
 function App() {
   const [movies, setMovies] = useState([]);
@@ -41,6 +43,7 @@ function App() {
   }
   useEffect(() => {
     getMovies();
+    console.log(movies)
   }, []);
   if (loading) {
     return <div className="loader"></div>;
@@ -61,19 +64,11 @@ function App() {
         onRequestClose={closeModal}
         contentLabel="Example Modal"
       >
-        <div
-          style={{
-            backgroundImage: `url(${generatePosterPath(
-              clickedMovie?.poster_path
-            )})`,
-            objectFit: "cover",
-            width: "100%",
-            height: "100%",
-            backgroundSize: "100% 100%",
-            opacity: "0.5",
-          }}
-        >
-          <h1>{clickedMovie?.original_title}</h1>
+        <div class ="movie-info">
+          <img className="modalimg" src={generatePosterPath(clickedMovie?.poster_path)}></img>
+  <h2 className="modaltitle">{clickedMovie?.original_title}</h2>
+  <p className="modalp">Release Date: {clickedMovie?.release_date}</p>
+  <p className="modalp">{clickedMovie?.overview}</p>
         </div>
       </Modal>
     </div>
